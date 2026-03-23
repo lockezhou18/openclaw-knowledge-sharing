@@ -275,15 +275,6 @@ Claude is powerful on its own — but it's a different thing from OpenClaw. Here
 
 ---
 
-### Prerequisites
-
-| Requirement | How to Check |
-|-------------|-------------|
-| **Node.js 24** | `node --version` |
-| **A terminal** | macOS Terminal / Linux shell / Windows WSL |
-
----
-
 ### Option A — The Easy Way: Let Claude Install It For You 🤯
 
 Why read docs when you can ask an AI to do it? This is the fastest path — and it's a great demo of human-in-the-loop.
@@ -324,7 +315,14 @@ Walk me through each step and fix any issues.
 
 ### Option B — Manual Install
 
-For those who prefer step-by-step control:
+For those who prefer step-by-step control.
+
+**Prerequisites:**
+
+| Requirement | How to Check |
+|-------------|-------------|
+| **Node.js 24** | `node --version` |
+| **A terminal** | macOS Terminal / Linux shell / Windows WSL |
 
 #### 1. Install OpenClaw
 
