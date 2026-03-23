@@ -465,44 +465,6 @@ The agent calls the Gmail tool → email delivered. ✅
 
 ---
 
-### 🙈 What Actually Happens (The Honest Version)
-
-In our real experience, here's what the first email journey actually looked like:
-
-```
-Attempt 1:  Send email to john.doe@gmail.com
-            → ❌ Bounced! Address doesn't exist.
-            
-Agent:      Observes the error. Asks user to double-check the address.
-
-User:       "Oh, it should be johndoe@gmail.com"
-
-Attempt 2:  Resend to johndoe@gmail.com
-            → ✅ Delivered!
-```
-
-**This is actually the BEST demo of the agent loop:**
-
-| Step | What Happened |
-|------|--------------|
-| **Perceive** | User says "send email to john.doe@gmail.com" |
-| **Reason** | Draft the email, prepare to send |
-| **Act** | Sends via Gmail tool |
-| **Observe** | ❌ Bounce error — address doesn't exist |
-| **Reflect** | "The address is wrong. I should ask the user to verify." |
-| **Perceive** | User provides corrected address |
-| **Act** | Resends to correct address |
-| **Observe** | ✅ Delivered |
-
-> 💡 **Teaching moment:** Things will go wrong. That's not failure — that's the agent loop working as designed. The agent perceived the error, reflected on it, and asked for help. A script would have crashed. An agent adapts.
-
-Other real bumps we hit along the way:
-- **OAuth flow** — Google auth requires clicking through a browser. The agent can't do this for you — it guides you to the right URL and waits. (Human-in-the-loop is not optional for auth!)
-- **Display name still wrong** — The Gmail sender name showed "eli" instead of "Eli Zhao" for weeks because it needed Google Admin access we didn't have. Some things take time.
-- **Duplicate replies** — The system occasionally sent the same message twice. Not catastrophic, but real.
-
-**None of this diminished the experience.** It made it more real and more trustworthy — because the agent was honest about what went wrong and worked to fix it.
-
 ---
 
 ### 🎓 Key Teaching Moment
