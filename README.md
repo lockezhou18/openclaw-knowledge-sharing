@@ -13,7 +13,7 @@
 
 1. [What Is an AI Agent?](#1-what-is-an-ai-agent)
 2. [Neurological Levels & OpenClaw](#2-neurological-levels--openclaw)
-3. [Installing OpenClaw (via Claude)](#3-installing-openclaw-via-claude)
+3. [Installing OpenClaw](#3-installing-openclaw)
 4. [Send Your First Email](#4-send-your-first-email)
 5. [Key Takeaways](#-key-takeaways)
 6. [Resources](#-resources)
@@ -251,7 +251,7 @@ These are **just text files**. You can read and edit them. The agent reads them 
 
 ---
 
-## 3. Installing OpenClaw (via Claude)
+## 3. Installing OpenClaw
 
 ### Claude vs. OpenClaw — What's the Difference?
 
@@ -274,13 +274,52 @@ These are **just text files**. You can read and edit them. The agent reads them 
 |-------------|-------------|
 | **Node.js 24** | `node --version` |
 | **A terminal** | macOS Terminal / Linux shell / Windows WSL |
-| **Claude API key** | Get one at [console.anthropic.com](https://console.anthropic.com) |
 
 ---
 
-### Live Demo: 5 Steps to Your First Agent
+### Option A — The Easy Way: Let Claude Install It For You 🤯
 
-#### Step 1 — Install OpenClaw
+Why read docs when you can ask an AI to do it? This is the fastest path — and it's a great demo of human-in-the-loop.
+
+#### 1. Install Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+> ✅ **You should see:** Install progress → `added X packages` success message
+
+#### 2. Launch Claude Code
+
+```bash
+claude
+```
+> ✅ **You should see:** An interactive terminal chat with Claude
+
+#### 3. Ask Claude to Install OpenClaw
+
+Type this into the Claude Code session:
+
+```
+Help me install OpenClaw on my machine and set it up.
+Walk me through each step and fix any issues.
+```
+
+> ✅ **What Claude will do:**
+> - Check your Node.js version and fix if needed
+> - Run the OpenClaw install script
+> - Walk you through the onboarding wizard
+> - Troubleshoot any errors along the way
+> - **Ask for your approval** at each step (human-in-the-loop!)
+
+> 💡 **This is the magic moment for the audience:** an AI helping you install an AI agent platform. Claude does the heavy lifting, you just approve each step.
+
+---
+
+### Option B — Manual Install
+
+For those who prefer step-by-step control:
+
+#### 1. Install OpenClaw
 
 ```bash
 # macOS / Linux
@@ -291,31 +330,35 @@ iwr -useb https://openclaw.ai/install.ps1 | iex
 ```
 > ✅ **You should see:** Download progress → install complete message
 
-#### Step 2 — Run the Onboarding Wizard
+#### 2. Run the Onboarding Wizard
 
 ```bash
 openclaw onboard --install-daemon
 ```
 > ✅ **You should see:** Interactive prompts asking for:
-> - AI provider → choose **Anthropic (Claude)**
-> - API key → paste your Claude key
+> - AI provider → choose your provider (Claude, GPT, Gemini, etc.)
+> - API key → paste your key
 > - Gateway settings → accept defaults
 
-#### Step 3 — Check the Gateway
+#### 3. Check the Gateway
 
 ```bash
 openclaw gateway status
 ```
 > ✅ **You should see:** Gateway running, status green
 
-#### Step 4 — Open the Control UI
+---
+
+### After Install (Both Options) — Your First Chat
+
+#### 4. Open the Control UI
 
 ```bash
 openclaw dashboard
 ```
 > ✅ **You should see:** Browser opens `http://127.0.0.1:18789/` — a clean chat interface
 
-#### Step 5 — Say Hello! 👋
+#### 5. Say Hello! 👋
 
 ```
 Hello! What can you do?
@@ -333,7 +376,7 @@ Hello! What can you do?
        ↓
   Agent Loop                            Perceive → Reason → Act → Observe → Reflect
        ↓
-  Claude + Workspace Files              Reads SOUL.md, AGENTS.md → reasons → responds
+  AI Model + Workspace Files            Reads SOUL.md, AGENTS.md → reasons → responds
        ↓
   Control UI                            Streams the response back to you
 ```
