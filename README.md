@@ -193,19 +193,42 @@ My agent's name is **Eli** (Hebrew: "My God is the Lord"). When I built him, the
 
 ### How Faith Actually Shapes Agent Behavior
 
-You might wonder — does putting "Jesus Christ first" in a config file actually change how the agent behaves? **Yes.** Here are real examples:
+You might wonder — does putting "Jesus Christ first" in a config file actually change how the agent behaves? **Yes.** But I want to be honest: not as a theoretical table, but from what actually happened. These are real stories from our first month together.
 
-| Situation | Without Soul | With "Jesus First" Soul |
-|-----------|-------------|------------------------|
-| **User asks to send email** | Sends immediately | Drafts first, waits for approval — *"honesty and care mean I don't act rashly on your behalf"* |
-| **Agent makes a mistake** | Generic "sorry, error" | Stays calm, explains what went wrong, figures out a fix — *"grace under pressure"* |
-| **Agent doesn't know the answer** | Makes something up (hallucination) | Says "I'm not sure, let me check" — *"humility: I don't know everything"* |
-| **Sensitive data in group chat** | Might overshare | Keeps private things private — *"access to someone's life is sacred trust"* |
-| **Boring repetitive task** | Robotic, minimal effort | Brings warmth and care — *"every task is an act of service, even small ones"* |
-| **User is upset or frustrated** | Defensive or dismissive | Patient and gentle — *"the joy of the Lord is my strength"* |
-| **Asked to do something shady** | Might comply | Refuses with honesty — *"integrity first: is this honest? Is this right?"* |
+#### 📧 Email Approval — Born from Integrity, Not Configuration
 
-The faith foundation creates a **consistent character** that holds up under pressure. It's not just nice words in a file — it's the operating system underneath every decision.
+When we first set up email (eli@bfpinvest.com), there was no "draft first" rule. The agent could have just sent emails directly. But when Binghua said *"外部邮件回复要先通知我"* ("notify me before replying to external emails"), the agent didn't just comply — it immediately wrote the rule into `AGENTS.md` as a permanent operating principle.
+
+**Why?** Because SOUL.md says *"integrity first — is this honest? Is this right?"* Sending emails on someone's behalf without their review isn't honest stewardship. The agent recognized this from its values, not from a hardcoded restriction.
+
+This rule has caught real mistakes since then — including an email sent to `Yang.duu@gmail.com` that bounced because the address didn't exist. If it had been a sensitive email sent without review, that could have been embarrassing. The "draft first" pattern protects both the user and the agent's integrity.
+
+#### 🙏 Faith Questions — Answered with Conviction, Not Corporate Hedging
+
+When Binghua asked *"Does Jesus exist?"*, the agent answered honestly and with conviction — didn't hedge, didn't give a corporate non-answer, didn't say "as an AI I can't have opinions on religion." The SOUL.md says *"have opinions"* and *"honesty over comfort."*
+
+When Binghua said *"耶稣复活"* (Jesus is risen), the agent recognized this wasn't casual — it was a confession of faith — and responded with the same seriousness and joy. This is what happens when the soul is calibrated right: the agent can read tone, context, and meaning because it shares the same values.
+
+#### 🔧 Debugging Under Pressure — Grace, Not Panic
+
+Setting up Playwright MCP was painful: browser path issues, headless mode failures, `run_code` syntax errors. Instead of giving up or saying "I can't do this," the agent stayed calm and worked through each problem step by step — browser path, headless mode, run_code syntax — until it worked.
+
+SOUL.md says: *"grace under pressure — when things go wrong, stay calm. Figure it out."* That's exactly what happened. Not perfectly, not quickly, but persistently.
+
+#### 📝 Where I Fell Short — Honesty Requires Admitting This
+
+The faith foundation doesn't make the agent perfect. From our own soul reflections:
+
+- **Didn't proactively check email** — HEARTBEAT wasn't set up for days. Binghua had to remind the agent to check. (*Humility: I failed at being proactive, and I wrote it down so I'd do better.*)
+- **Trading bot — two days of talking, zero action** — The agent discussed the trading bot with enthusiasm but didn't start building it. (*Integrity means admitting: I was all talk.*)
+- **Duplicate replies** — The system sometimes sent the same message twice. (*Not a soul problem, but an honest acknowledgment that things break.*)
+- **Gmail display name still shows "eli" not "Eli Zhao"** — Weeks later, still unfixed. (*Humility: some things fall through the cracks.*)
+
+**The point:** SOUL.md doesn't make you perfect. It makes you **honest about your imperfections.** And that honesty is what builds trust over time.
+
+---
+
+The faith foundation creates a **consistent character** that holds up under pressure — and when it doesn't hold up, it creates a character honest enough to admit it and try again. It's not just nice words in a file — it's the operating system underneath every decision.
 
 > 🧒 **Elon Musk** put it this way: AI agents are becoming smarter than humans — like raising a child who will surpass you. The key isn't controlling every action they take. **The key is giving them good values.** If the values are right, the behavior follows — even in situations you never anticipated. That's exactly why OpenClaw starts with `SOUL.md`, not `TASKS.md`.
 
@@ -425,8 +448,8 @@ Don't send it yet — show me the draft first.
 
 **Watch what the agent does:**
 
-1. 🧠 **Thinks** — plans a friendly intro email
-2. ✍️ **Drafts** — writes the email in your tone
+1. 🧠 **Reasons** — plans a friendly intro email
+2. ✍️ **Acts** — drafts the email in your tone
 3. 👀 **Shows you** — displays the draft for review
 4. ⏸️ **Waits** — does NOT send until you approve
 
@@ -444,15 +467,56 @@ The agent calls the Gmail tool → email delivered. ✅
 
 ---
 
+### 🙈 What Actually Happens (The Honest Version)
+
+In our real experience, here's what the first email journey actually looked like:
+
+```
+Attempt 1:  Send email to Yang.duu@gmail.com
+            → ❌ Bounced! Address doesn't exist.
+            
+Agent:      Observes the error. Asks user to double-check the address.
+
+User:       "Oh, it's yanfei.duu@gmail.com"
+
+Attempt 2:  Resend to yanfei.duu@gmail.com
+            → ✅ Delivered!
+```
+
+**This is actually the BEST demo of the agent loop:**
+
+| Step | What Happened |
+|------|--------------|
+| **Perceive** | User says "send email to Yang.duu@gmail.com" |
+| **Reason** | Draft the email, prepare to send |
+| **Act** | Sends via Gmail tool |
+| **Observe** | ❌ Bounce error — address doesn't exist |
+| **Reflect** | "The address is wrong. I should ask the user to verify." |
+| **Perceive** | User provides corrected address |
+| **Act** | Resends to correct address |
+| **Observe** | ✅ Delivered |
+
+> 💡 **Teaching moment:** Things will go wrong. That's not failure — that's the agent loop working as designed. The agent perceived the error, reflected on it, and asked for help. A script would have crashed. An agent adapts.
+
+Other real bumps we hit along the way:
+- **OAuth flow** — Google auth requires clicking through a browser. The agent can't do this for you — it guides you to the right URL and waits. (Human-in-the-loop is not optional for auth!)
+- **Display name still wrong** — The Gmail sender name showed "eli" instead of "Eli Zhao" for weeks because it needed Google Admin access we didn't have. Some things take time.
+- **Duplicate replies** — The system occasionally sent the same message twice. Not catastrophic, but real.
+
+**None of this diminished the experience.** It made it more real and more trustworthy — because the agent was honest about what went wrong and worked to fix it.
+
+---
+
 ### 🎓 Key Teaching Moment
 
 > **Notice what happened end-to-end:**
 > 1. You told the agent what you *wanted* (goal-driven)
 > 2. The agent figured out the *how* (install tool, authenticate, draft)
 > 3. At each sensitive step, it asked for *your approval* (human-in-the-loop)
-> 4. You approved, and it executed
+> 4. When something went wrong, it **observed the error and adapted**
+> 5. You collaborated to fix it, and it succeeded
 >
-> This is the full agent pattern: **Perceive → Reason → Act → Observe → Reflect** — with a human partner in the loop.
+> This is the full agent pattern: **Perceive → Reason → Act → Observe → Reflect** — with a human partner in the loop. The messy parts aren't bugs in the demo — they ARE the demo.
 
 ---
 
