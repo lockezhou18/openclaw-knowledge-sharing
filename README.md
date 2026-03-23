@@ -427,7 +427,7 @@ Help me set it up. Let me know anything you need from my side.
 **What your agent will do:**
 1. 🔍 **Check** if the email tool (`gog`) is installed
 2. 📦 **Install** it if needed (`npm install -g @openclaw/gog`)
-3. 🔐 **Guide you through authentication** — tells you to open a link in your browser and approve the OAuth flow (human-in-the-loop!)
+3. 🔐 **Guide you through authentication** — tells you to open a link in your browser and approve the OAuth flow (human-in-the-loop!). This may take a few steps — let me know if you need support!
 4. ✅ **Confirm** everything is connected
 
 > This is the agent pattern in action: it does the work, but **you stay in control** of authentication and permissions. The agent can't log into your Google account without your explicit approval in the browser.
