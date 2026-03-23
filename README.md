@@ -143,10 +143,11 @@ Robert Dilts' *Neurological Levels* framework (from NLP — Neuro-Linguistic Pro
 
 > **📖 Reference:** Robert Dilts, *Changing Belief Systems with NLP* (1990). The model is also called the "Dilts Pyramid" or "Logical Levels of Change."
 
-![Dilts Pyramid — Neurological Levels](https://www.researchgate.net/publication/380881551/figure/fig7/AS:11431281241975217@1717064488285/NLP-neurological-levels.png)
-*Source: [ResearchGate — NLP Neurological Levels](https://www.researchgate.net/figure/NLP-neurological-levels_fig7_380881551) (CC BY-NC-ND 4.0)*
+Here's how the levels map — as concentric circles, with the **Soul** at the center radiating outward:
 
-This framework maps surprisingly well to how AI agent systems are designed — and it's what makes OpenClaw different from most tools.
+![Neurological Levels — Concentric Circles](./neurological-levels.svg)
+
+Inner levels shape outer levels. **Start from the Soul, everything else follows.** This framework maps surprisingly well to how AI agent systems are designed — and it's what makes OpenClaw different from most tools.
 
 ---
 
