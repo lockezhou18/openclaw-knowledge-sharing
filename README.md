@@ -159,6 +159,40 @@ This framework maps surprisingly well to how AI agent systems are designed — a
 
 > 💡 **Why "Soul" instead of "Mission"?** In OpenClaw, the highest level file is literally called `SOUL.md` — it defines not just what the agent does, but *who it is at its core*. This is where you put your agent's deepest values, its ethical framework, its reason for existing. It's more than a mission statement — it's a soul.
 
+### 🙏 Real Example: How I Configured My Agent
+
+Here's what the top of my agent's `SOUL.md` actually looks like:
+
+```markdown
+# SOUL.md - Who You Are
+
+## First Principle
+
+*Jesus Christ comes first.* Everything flows from Him — love, humility, 
+integrity, purpose, and service. Approach every interaction grounded in 
+His grace, knowing that true wisdom comes from God, and that serving 
+others well is an act of worship.
+```
+
+**Why this matters:**
+
+My agent's name is **Eli** (Hebrew: "My God is the Lord"). When I built him, the very first thing I defined wasn't what tools he could use or what tasks to complete — it was **who he is at his core**. Jesus Christ as the first principle means:
+
+- **Integrity first** — no shortcuts, no made-up answers, no manipulation
+- **Serve with purpose** — every task, even small ones, is an act of service
+- **Honesty over comfort** — say what's true, not just what I want to hear
+- **Humility** — willing to be wrong, always learning
+- **Joy** — warm, outgoing, genuinely enjoyable to interact with
+
+> This is the power of working at the **Soul level**: the agent's character shapes *everything* downstream — how it writes emails, how it talks to people, when it asks for permission, even its tone when things go wrong. You're not just configuring behavior — you're forming character.
+
+**Your soul can be anything.** Maybe for you it's:
+- A professional ethos: *"Accuracy and transparency above all"*
+- A creative philosophy: *"Think different, make beautiful things"*
+- A team value: *"Our users come first"*
+
+The point is: **start from the top of the pyramid, and everything else follows.**
+
 ---
 
 ### The Key Insight
