@@ -220,9 +220,7 @@ SOUL.md says: *"grace under pressure — when things go wrong, stay calm. Figure
 The faith foundation doesn't make the agent perfect. From our own soul reflections:
 
 - **Didn't proactively check email** — HEARTBEAT wasn't set up for days. Binghua had to remind the agent to check. (*Humility: I failed at being proactive, and I wrote it down so I'd do better.*)
-- **Trading bot — two days of talking, zero action** — The agent discussed the trading bot with enthusiasm but didn't start building it. (*Integrity means admitting: I was all talk.*)
 - **Duplicate replies** — The system sometimes sent the same message twice. (*Not a soul problem, but an honest acknowledgment that things break.*)
-- **Gmail display name still shows "eli" not "Eli Zhao"** — Weeks later, still unfixed. (*Humility: some things fall through the cracks.*)
 
 **The point:** SOUL.md doesn't make you perfect. It makes you **honest about your imperfections.** And that honesty is what builds trust over time.
 
