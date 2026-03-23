@@ -253,109 +253,89 @@ These are **just text files**. You can read and edit them. The agent reads them 
 
 ## 3. Installing OpenClaw (via Claude)
 
-### The Approach: Let AI Help You Set Up AI 🤯
+### Claude vs. OpenClaw — What's the Difference?
 
-Here's the fun part — we'll use **Claude** (the AI) to help us install and configure **OpenClaw** (the agent platform).
+| | Claude (AI Model) | OpenClaw (Agent Platform) |
+|---|---|---|
+| **What it is** | The brain — reasons, writes, codes | The body — tools, memory, personality, 24/7 presence |
+| **Memory** | Forgets after each chat | Remembers across sessions (MEMORY.md) |
+| **Tools** | None (just text in, text out) | Email, calendar, web, code, files... |
+| **Personality** | Generic assistant | Your custom agent (SOUL.md, IDENTITY.md) |
+| **Availability** | Only when you open the app | Runs 24/7 as a background service |
+| **Channels** | Only their own UI | WhatsApp, Telegram, Discord, web, and more |
 
-This demonstrates a key difference:
-- **Claude** = an AI model (the brain). Great for thinking, answering, and coding.
-- **OpenClaw** = an agent platform. It gives the brain tools, memory, personality, and 24/7 presence.
-
-> Think of it this way: Claude is like hiring a brilliant consultant. OpenClaw is like giving that consultant a desk, email, calendar, memory, and permission to work for you around the clock.
+> 💡 Claude is like hiring a brilliant consultant. OpenClaw is like giving that consultant a desk, email, calendar, memory, and permission to work for you around the clock.
 
 ---
 
 ### Prerequisites
 
-Before you start, make sure you have:
-
-- **Node.js 24** (check with `node --version`)
-- A terminal (macOS Terminal, Linux shell, or Windows WSL)
-- A **Claude API key** — get one at [console.anthropic.com](https://console.anthropic.com)
-
----
-
-### Option A — Interactive: Ask Claude to Help You Install
-
-If you already have Claude (via [claude.ai](https://claude.ai) or Claude Code CLI):
-
-1. **Install Claude Code** (if you don't have it):
-   ```bash
-   npm install -g @anthropic-ai/claude-code
-   ```
-
-2. **Ask Claude to install OpenClaw for you:**
-   ```
-   Help me install OpenClaw on my machine. 
-   Walk me through each step and fix any issues that come up.
-   ```
-
-Claude will:
-- Check your Node.js version
-- Run the install command
-- Guide you through the onboarding wizard
-- Troubleshoot any errors
-
-This is **human-in-the-loop** in action — Claude does the heavy lifting, you approve each step.
+| Requirement | How to Check |
+|-------------|-------------|
+| **Node.js 24** | `node --version` |
+| **A terminal** | macOS Terminal / Linux shell / Windows WSL |
+| **Claude API key** | Get one at [console.anthropic.com](https://console.anthropic.com) |
 
 ---
 
-### Option B — Manual: Step-by-Step Install
+### Live Demo: 5 Steps to Your First Agent
 
-**Step 1 — Install OpenClaw**
+#### Step 1 — Install OpenClaw
 
-macOS / Linux:
 ```bash
+# macOS / Linux
 curl -fsSL https://openclaw.ai/install.sh | bash
-```
 
-Windows (PowerShell):
-```powershell
+# Windows (PowerShell)
 iwr -useb https://openclaw.ai/install.ps1 | iex
 ```
+> ✅ **You should see:** Download progress → install complete message
 
-**Step 2 — Run the Onboarding Wizard**
+#### Step 2 — Run the Onboarding Wizard
+
 ```bash
 openclaw onboard --install-daemon
 ```
+> ✅ **You should see:** Interactive prompts asking for:
+> - AI provider → choose **Anthropic (Claude)**
+> - API key → paste your Claude key
+> - Gateway settings → accept defaults
 
-The wizard will ask you:
-- Which AI provider to use → choose **Anthropic (Claude)**
-- Your **Claude API key** → paste it in
-- Basic gateway settings
+#### Step 3 — Check the Gateway
 
-**Step 3 — Check the Gateway is Running**
 ```bash
 openclaw gateway status
 ```
+> ✅ **You should see:** Gateway running, status green
 
-**Step 4 — Open the Control UI**
+#### Step 4 — Open the Control UI
+
 ```bash
 openclaw dashboard
 ```
-Opens `http://127.0.0.1:18789/` in your browser.
+> ✅ **You should see:** Browser opens `http://127.0.0.1:18789/` — a clean chat interface
 
-**Step 5 — Say Hello! 👋**
+#### Step 5 — Say Hello! 👋
+
 ```
 Hello! What can you do?
 ```
+> ✅ **You should see:** The agent responds with personality — it has already read your SOUL.md, IDENTITY.md, and AGENTS.md. This isn't a generic chatbot reply. It's *your* agent introducing itself.
 
 ---
 
-### 🔍 What Just Happened Under the Hood
+### 🔍 What Just Happened
 
 ```
-Your message
-    ↓
-Gateway (receives it, runs 24/7)
-    ↓
-Agent loop starts (Perceive → Reason → Act → Observe → Reflect)
-    ↓
-Claude (reads SOUL.md, AGENTS.md, reasons about your message)
-    ↓
-Streams response back
-    ↓
-Control UI displays it
+  Your message                          "Hello! What can you do?"
+       ↓
+  Gateway                               Background service, always running
+       ↓
+  Agent Loop                            Perceive → Reason → Act → Observe → Reflect
+       ↓
+  Claude + Workspace Files              Reads SOUL.md, AGENTS.md → reasons → responds
+       ↓
+  Control UI                            Streams the response back to you
 ```
 
 > 💡 **The key difference from plain Claude:**  
