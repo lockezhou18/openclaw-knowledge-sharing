@@ -255,16 +255,23 @@ These are **just text files**. You can read and edit them. The agent reads them 
 
 ### Claude vs. OpenClaw — What's the Difference?
 
-| | Claude (AI Model) | OpenClaw (Agent Platform) |
-|---|---|---|
-| **What it is** | The brain — reasons, writes, codes | The body — tools, memory, personality, 24/7 presence |
-| **Memory** | Forgets after each chat | Remembers across sessions (MEMORY.md) |
-| **Tools** | None (just text in, text out) | Email, calendar, web, code, files... |
-| **Personality** | Generic assistant | Your custom agent (SOUL.md, IDENTITY.md) |
-| **Availability** | Only when you open the app | Runs 24/7 as a background service |
-| **Channels** | Only their own UI | WhatsApp, Telegram, Discord, web, and more |
+Claude is powerful on its own — but it's a different thing from OpenClaw. Here's how they compare:
 
-> 💡 Claude is like hiring a brilliant consultant. OpenClaw is like giving that consultant a desk, email, calendar, memory, and permission to work for you around the clock.
+| | Claude | OpenClaw |
+|---|---|---|
+| **What it is** | AI model — reasons, writes, codes | Agent platform — gives any AI model a body to act in the real world |
+| **The brain** | *Is* the brain (Claude, Opus, Sonnet, etc.) | *Uses* any brain — Claude, GPT, Gemini, DeepSeek, local models... |
+| **Memory** | ✅ Persistent memory (since March 2026) — auto-summarized, user-controlled | ✅ File-based memory you fully own — MEMORY.md, daily notes, curated long-term context |
+| **Tools** | ✅ MCP integrations (Slack, Gmail, Figma, etc.) via Anthropic's connectors | ✅ 10,000+ community skills on ClawHub — email, calendar, browser, code, smart home, and more |
+| **Projects** | ✅ Projects workspace — organizes chats, files, artifacts | ✅ Workspace with SOUL.md, AGENTS.md, IDENTITY.md — defines who the agent *is*, not just what it does |
+| **Personality** | System prompts + CLAUDE.md for coding | Full soul stack — SOUL.md (values), IDENTITY.md (character), AGENTS.md (behavior) |
+| **Coding** | ✅ Claude Code CLI — agentic coding with file editing, shell, git | ✅ Spawns Claude Code / Codex as sub-agents, or codes directly |
+| **Availability** | When you open claude.ai or run Claude Code | Runs 24/7 as a background service — heartbeats, cron jobs, monitoring |
+| **Channels** | claude.ai web UI, Claude Code CLI, API | WhatsApp, Telegram, Discord, Signal, Slack, iMessage, SMS, web UI |
+| **Where it runs** | Anthropic's cloud | Your machine — local-first, your data stays yours |
+| **Cost** | Pro subscription or API usage | Open source — $0 + your own API keys |
+
+> 💡 **They're complementary, not competing.** Claude is one of the best brains available. OpenClaw gives that brain (or any brain) a body — tools, memory, personality, channels, and 24/7 presence on *your* machine. You can use Claude *through* OpenClaw and get the best of both worlds.
 
 ---
 
