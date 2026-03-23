@@ -26,7 +26,7 @@
 
 By the end of this section, you will be able to:
 - ✅ Explain the difference between a chatbot and an AI agent
-- ✅ Describe the agent loop: Perceive → Think → Act → Observe → Reflect
+- ✅ Describe the agent loop: Perceive → Reason → Act → Observe → Reflect
 - ✅ Understand task-driven vs. goal-driven agents
 - ✅ Know what role the AI model, tools, and human-in-the-loop play
 
@@ -52,26 +52,30 @@ Every agent — no matter how complex — follows this cycle:
 
 > **📖 Reference:** This model is rooted in the classic AI textbook *"Artificial Intelligence: A Modern Approach"* (Russell & Norvig), which describes agents as entities that perceive their environment and act upon it.
 
+The classic textbook model describes three core steps — **Perceive, Reason, Act**:
+
 ![Agent Perceive-Reason-Act Loop](https://docs.aws.amazon.com/images/prescriptive-guidance/latest/agentic-ai-foundations/images/perceive-reason-act.png)
 *Source: [AWS — Agentic AI Foundations: The Agent Function](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-foundations/perceive-reason-act.html)*
 
+In practice, modern agents expand this into a richer cycle:
+
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                                                              │
-│   Perceive → Think → Act → Observe → Reflect & Remember     │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   Perceive → Reason → Act → Observe → Reflect & Remember → loop    │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
-| Step | What It Means | Example |
-|------|--------------|---------|
-| **Perceive** | Reads your message, files, emails, the web | "Send an intro email to John" |
-| **Think** | Decides *what to do* using an AI model | "I should draft the email, then ask for approval" |
-| **Act** | Calls tools — email, search, code, files | Drafts email using Gmail tool |
-| **Observe** | Reads the result, checks if it worked | "Draft created successfully" |
-| **Reflect & Remember** | Updates memory, learns from outcome | Saves draft context, remembers John's email for next time |
+| Step | Classic Model | What It Means | Example |
+|------|:------------:|--------------|---------|
+| **Perceive** | ← Perceive | Gathers input from environment — your message, files, emails, the web | "Send an intro email to John" |
+| **Reason** | ← Reason | AI model analyzes the situation, plans what to do | "I should draft the email, then ask for approval" |
+| **Act** | ← Act | Calls tools — email, search, code, files | Drafts email using Gmail tool |
+| **Observe** | *(feedback loop)* | Reads the result, checks if the action worked | "Draft created successfully" |
+| **Reflect & Remember** | *(memory)* | Updates memory, learns from outcome for future tasks | Saves context, remembers John's email for next time |
 
-> 💡 **Why "Reflect & Remember"?** Unlike simple loops, great agents don't just repeat — they **learn**. They update their memory, refine their approach, and carry lessons into future tasks. This is what separates a truly useful agent from a script.
+> 💡 **Why go beyond Perceive-Reason-Act?** The classic 3-step model captures the core loop. But great agents don't just repeat — they **observe** the results of their actions and **reflect**. They update their memory, refine their approach, and carry lessons into future tasks. This is what separates a truly useful agent from a script.
 
 ---
 
@@ -344,9 +348,9 @@ Your message
     ↓
 Gateway (receives it, runs 24/7)
     ↓
-Agent loop starts (Perceive → Think → Act → Observe)
+Agent loop starts (Perceive → Reason → Act → Observe → Reflect)
     ↓
-Claude (reads SOUL.md, AGENTS.md, thinks about your message)
+Claude (reads SOUL.md, AGENTS.md, reasons about your message)
     ↓
 Streams response back
     ↓
@@ -419,7 +423,7 @@ The agent calls the Gmail tool → email delivered. ✅
 > 3. At each sensitive step, it asked for *your approval* (human-in-the-loop)
 > 4. You approved, and it executed
 >
-> This is the full agent pattern: **Perceive → Think → Act → Observe → Reflect** — with a human partner in the loop.
+> This is the full agent pattern: **Perceive → Reason → Act → Observe → Reflect** — with a human partner in the loop.
 
 ---
 
@@ -427,8 +431,8 @@ The agent calls the Gmail tool → email delivered. ✅
 
 | Concept | One-Liner |
 |---------|-----------|
-| 🤖 **Agent** | Perceive → Think → Act → Observe → Reflect & Remember |
-| 🧠 **Model** | The brain — Claude decides *what* to do |
+| 🤖 **Agent** | Perceive → Reason → Act → Observe → Reflect & Remember |
+| 🧠 **Model** | The brain — Claude *reasons* about what to do |
 | 🔧 **Tools** | The hands — email, web, files *actually do* the work |
 | 🔄 **Task vs. Goal** | Task = one-shot command; Goal = ongoing autonomous behavior |
 | 🤝 **Human-in-the-Loop** | Agents ask before risky actions — trust is a feature, not a bug |
