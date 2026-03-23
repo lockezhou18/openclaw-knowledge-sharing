@@ -470,14 +470,14 @@ The agent calls the Gmail tool → email delivered. ✅
 In our real experience, here's what the first email journey actually looked like:
 
 ```
-Attempt 1:  Send email to Yang.duu@gmail.com
+Attempt 1:  Send email to john.doe@gmail.com
             → ❌ Bounced! Address doesn't exist.
             
 Agent:      Observes the error. Asks user to double-check the address.
 
-User:       "Oh, it's yanfei.duu@gmail.com"
+User:       "Oh, it should be johndoe@gmail.com"
 
-Attempt 2:  Resend to yanfei.duu@gmail.com
+Attempt 2:  Resend to johndoe@gmail.com
             → ✅ Delivered!
 ```
 
@@ -485,7 +485,7 @@ Attempt 2:  Resend to yanfei.duu@gmail.com
 
 | Step | What Happened |
 |------|--------------|
-| **Perceive** | User says "send email to Yang.duu@gmail.com" |
+| **Perceive** | User says "send email to john.doe@gmail.com" |
 | **Reason** | Draft the email, prepare to send |
 | **Act** | Sends via Gmail tool |
 | **Observe** | ❌ Bounce error — address doesn't exist |
