@@ -3,7 +3,6 @@
 
 ---
 
-> **Audience:** Beginners — no prior AI agent or OpenClaw experience needed  
 > **Duration:** ~60–90 minutes  
 > **Goal:** Understand AI agents conceptually, see OpenClaw in action, and send your first email through it
 
